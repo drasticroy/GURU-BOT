@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 let gitagptHandler = async (m, { text, usedPrefix, command }) => {
   if (!text && !(m.quoted && m.quoted.text)) {
-    throw `Please provide some text or quote a message to get a response. Keep in mind that GitaGPT is still in the testing phase, so it may generate inaccurate responses at times.`;
+    throw `Please provide some text or quote a message to get a response. Don't be a pussy.`;
   }
 
   if (!text && m.quoted && m.quoted.text) {
