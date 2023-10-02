@@ -1,7 +1,7 @@
 { 
-    "name": "gurubot",
+    "name": "gurubotrecoded",
     "version": "2.0.0",
-    "description": "Advanced WhatsApp Bot",
+    "description": "A very advanced WhatsApp Bot",
     "main": "index.js",
     "type": "module",
     "directories": {
@@ -25,16 +25,16 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/Guru322/GURU-BOT",
+    "homepage": "https://github.com/drasticroy/GURU-BOT",
     "author": {
-        "name": "GURU"
+        "name": "GURURECODED"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Guru322/GURU-BOT.git"
+        "url": "git+https://github.com/drasticroy/GURU-BOT.git"
     },
     "bugs": {
-        "url": "https://github.com/Guru322/GURU-BOT/issues"
+        "url": "https://github.com/drasticroy/GURU-BOT/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
