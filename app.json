@@ -1,10 +1,10 @@
 {
-  "name": "whatsapp-bot (GURU-BOT)",
-  "description": " Whatsapp bot.",
+  "name": "whatsapp-bot (GURU RECODED-BOT)",
+  "description": " THE GURU RECODED BY DRASTIC.",
   "keywords": [
     "whatsapp bot"
   ],
-  "repository": "https://github.com/Guru322/GURU-BOT",
+  "repository": "https://github.com/drasticroy/GURU-BOT",
   "stack": "container",
   "env": {
     "DATABASE_URL": {
