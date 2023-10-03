@@ -105,7 +105,7 @@ break
       isAll = true
       if (!isROwner) {
         global.dfail('rowner', m, conn)
-        throw false
+        throw true
       }
       global.opts['self'] = isEnable
       break
