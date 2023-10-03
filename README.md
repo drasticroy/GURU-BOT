@@ -9,10 +9,10 @@
 <a href="https://github.com/Guru322"><img title="Author" src="https://img.shields.io/badge/GURU-BOT-black?style=for-the-badge&logo=telegram"></a>
 <p/>
 <p align="center">
-<a href="https://github.com/Guru322?tab=followers"><img title="Followers" src="https://img.shields.io/github/followers/Guru322?label=Followers&style=social"></a>
-<a href="https://github.com/Guru322/GURU-BOT/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Guru322/GURU-BOT?&style=social"></a>
-<a href="https://github.com/Guru322/GURU-BOT/network/members"><img title="Fork" src="https://img.shields.io/github/forks/Guru322/GURU-BOT?style=social"></a>
-<a href="https://github.com/Guru322/GURU-BOT/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Guru322/GURU-BOT?label=Watching&style=social"></a>
+<a href="https://github.com/drasticroy?tab=followers"><img title="Followers" src="https://img.shields.io/github/followers/Guru322?label=Followers&style=social"></a>
+<a href="https://github.com/drasticroy/GURU-BOT/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/drasticroy/GURU-BOT?&style=social"></a>
+<a href="https://github.com/drasticroy/GURU-BOT/network/members"><img title="Fork" src="https://img.shields.io/github/forks/drasticroy/GURU-BOT?style=social"></a>
+<a href="https://github.com/drasticroy/GURU-BOT/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/drasticroy/GURU-BOT?label=Watching&style=social"></a>
 </p>
 
 ####  
