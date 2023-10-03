@@ -12,7 +12,7 @@
 
  Run the following commands to clone the repo (Use your fork)
  ```SH
-> git clone https://github.com/Guru322/GURU-BOT
+> git clone https://github.com/drasticroy/GURU-BOT
 > cd GURU-BOT
  ```
 
