@@ -32,7 +32,6 @@ GURU BOT RECODED - Better version of Guru Bot Recoded By Drastic Roy nothing Rip
 <a href='https://replit.com/@victiousroy/GURU-BOT-PAIR?v=1' target="_blank"><img alt='SESSION ID' src='https://img.shields.io/badge/Session_id-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
 
-
 #### DEPLOY TO Heroku 
 
 1. If You don't have an account in Heroku. Create a account.
