@@ -28,8 +28,8 @@ export async function before(m, { isAdmin, isBotAdmin }) {
             "You are not too toxic, is it fun?",
             "You appear to be toxic. Calm down!",
             "Don't be so toxic. You can relax!",
-            "There's nothing more I could say, you're totally the most toxic person in the world!",
-            "Your toxic meter also goes above 100%."
+            "YOU'RE SUPER TOXIC YOUNG G!",
+            "Your toxic meter also goes above thought."
         ];
 
         const toxicityPercentage = Number(analysisResult.toxicity * 100).toFixed(2)
