@@ -681,7 +681,7 @@ export async function groupsUpdate(groupsUpdate) {
         } else if (groupUpdate.restrict === true) {
             text = (chats.sRestrictOn || this.sRestrictOn || conn.sRestrictOn || `*${emoji.restrictOn} Group is now restricted to participants only!*`)
         } else if (groupUpdate.restrict === false) {
-            text = (chats.sRestrictOff || this.sRestrictOff || conn.sRestrictOff || `*${emoji.restrictOff} Group is now restricted to admins only!*`)
+            text = (chats.sRestrictOff || this.sRestrictOff || conn.sRestrictOff || `*${emoji.restrictOff} Admins only restiriction Applied!*`)
         }
         
 
@@ -713,7 +713,7 @@ export async function deleteUpdate(message) {
             ┌─⊷  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀 
             ▢ *Number :* @${participant.split`@`[0]} 
             └─────────────
-            TO DEACTIVE , PRESS 
+            TO DEACTIVATE , TYPE 
             */off antidelete*
             *.enable delete*
             `.trim(), msg, {
@@ -811,9 +811,9 @@ global.dfail = (type, m, conn) => {
         private: `*${emoji.private} Private Query*\n
     ${userTag} This command can only be used in *Private Chats*!`,
         admin: `*${emoji.admin} Admin's Query*\n
-    ${userTag} This command is only for *Group Admins*!`,
+    ${userTag} Bitch youre not one of the *Group Admins*!`,
         botAdmin: `*${emoji.botAdmin} Bot Admin's Query*\n
-    ${userTag} Make the bot an *Admin* to use this command!`,
+    ${userTag} Is the bot an *Admin* idiot!`,
         unreg: `*${emoji.unreg} Registration Query*\n
     ${userTag} Please register to use this feature by typing:\n\n*#register name.age*\n\nExample: *#register ${m.name}.18*!`,
         nsfw: `*${emoji.nsfw} NSFW Query*\n
