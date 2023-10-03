@@ -4,7 +4,7 @@ export async function before(m, { conn, isAdmin, isBotAdmin, isOwner, isROwner }
     if (m.isBaileys && m.fromMe) return true;
   
     // Allow the owner's messages 
-    if (isOwner) return false;
+    if (isOwner) return true;
   
     // Ignore messages sent in group chats
     if (m.isGroup) return false;
