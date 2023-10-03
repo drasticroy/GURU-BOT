@@ -1,7 +1,7 @@
 
 <p align="center">  
   <a href="https://youtu.be/WcA7GZuaN0A">
-    <img alt="Guru" height="800" src="[https://cdn.jsdelivr.net/gh/Guru322/api@Guru/guru.jpg](https://cdn.jsdelivr.net/gh/drasticroy/api@Guru/1cd0772a45c481e16ef64d16c6218ccf.jpg)">
+    <img alt="Guru" height="1000" src="https://cdn.jsdelivr.net/gh/drasticroy/api@Guru/1cd0772a45c481e16ef64d16c6218ccf.jpg">
     <h1 align="center">GURU BOT RECODED 2.O</h1>
   </a>
 </p>
