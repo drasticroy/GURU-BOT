@@ -132,11 +132,11 @@ export async function handler(chatUpdate) {
             if (typeof chat !== "object")
                 global.db.data.chats[m.chat] = {}
             if (chat) {
-                if (!("antiDelete" in chat)) chat.antiDelete = true
+                if (!("antiDelete" in chat)) chat.antiDelete = false
                 if (!("antiLink" in chat)) chat.antiLink = false
                 if (!("antiSticker" in chat)) chat.antiSticker = false
-                if (!("antiToxic" in chat)) chat.antiToxic = true
-                if (!("detect" in chat)) chat.detect = true
+                if (!("antiToxic" in chat)) chat.antiToxic = false
+                if (!("detect" in chat)) chat.detect = false
                 if (!("getmsg" in chat)) chat.getmsg = true
                 if (!("isBanned" in chat)) chat.isBanned = false
                 if (!("nsfw" in chat)) chat.nsfw = false
@@ -147,15 +147,15 @@ export async function handler(chatUpdate) {
                 if (!("sWelcome" in chat)) chat.sWelcome = ""
                 if (!("useDocument" in chat)) chat.useDocument = false
                 if (!("viewOnce" in chat)) chat.viewOnce = false
-                if (!("welcome" in chat)) chat.welcome = true
+                if (!("welcome" in chat)) chat.welcome = false
                 if (!isNumber(chat.expired)) chat.expired = 0
             } else
                 global.db.data.chats[m.chat] = {
-                    antiDelete: true,
+                    antiDelete: false,
                     antiLink: false,
                     antiSticker: false,
                     antiToxic: false,
-                    detect: true,
+                    detect: false,
                     expired: 0,
                     getmsg: true,
                     isBanned: false,
@@ -546,7 +546,7 @@ export async function participantsUpdate({
                 } finally {
                   let text = (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user')
                     .replace('@group', await this.getName(id))
-                    .replace('@desc', groupMetadata.desc?.toString() || 'Desconocido')
+                    .replace('@desc', groupMetadata.desc?.toString() || 'error')
                     .replace('@user', '@' + user.split('@')[0]);
           
                   let nthMember = groupMetadata.participants.length;
@@ -559,14 +559,25 @@ export async function participantsUpdate({
                   )}&memberCount=${encodeURIComponent(
                     nthMember.toString()
                   )}&avatar=${encodeURIComponent(pp)}&background=${encodeURIComponent(
-                    'https://i.imgur.com/8B4jwGq.jpeg'
+                    'https://cdn.jsdelivr.net/gh/drasticroy/A17/Assets/pic12.jpg'
                   )}`;
           
                   try {
                     let welcomeResponse = await fetch(welcomeApiUrl);
                     let welcomeBuffer = await welcomeResponse.buffer();
           
-                    this.sendFile(id, welcomeBuffer, 'welcome.png', text, null, false, { mentions: [user] });
+                     this.sendMessage(id, {
+                        text: text,
+                        contextInfo: {
+                        mentionedJid: [user],
+                        externalAdReply: {
+                        title: "ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ",
+                        body: "welcome to Group",
+                        thumbnailUrl: welcomeApiUrl,
+                        sourceUrl: 'https://wa.me/+254740279985',
+                        mediaType: 1,
+                        renderLargerThumbnail: true
+                        }}})
                   } catch (error) {
                     console.error(`Error generating welcome image: ${error}`);
                   }
@@ -585,8 +596,8 @@ export async function participantsUpdate({
                   ppgp = await this.profilePictureUrl(id, 'image');
                 } catch (error) {
                   console.error(`Error retrieving profile picture: ${error}`);
-                  pp = 'https://i.imgur.com/8B4jwGq.jpeg'; // Assign default image URL
-                  ppgp = 'https://i.imgur.com/8B4jwGq.jpeg'; // Assign default image URL
+                  pp = 'https://cdn.jsdelivr.net/gh/drasticroy/A17@master/Assets/pic5.jpg'; // Assign default image URL
+                  ppgp = 'https://cdn.jsdelivr.net/gh/drasticroy/A17@master/Assets/pic8.jpg'; // Assign default image URL
                 } finally {
                   let text = (chat.sBye || this.bye || conn.bye || 'HELLO, @user')
                     .replace('@user', '@' + user.split('@')[0]);
@@ -594,21 +605,32 @@ export async function participantsUpdate({
                   let nthMember = groupMetadata.participants.length;
                   let secondText = `Goodbye, our ${nthMember}th group member`;
           
-                  let leaveApiUrl = `https://wecomeapi.onrender.com/leave-image?username=${encodeURIComponent(
+                  let leaveApiUrl = `https://cdn.jsdelivr.net/gh/drasticroy/A17@master/Assets/pic8.jpg?username=${encodeURIComponent(
                     await this.getName(user)
                   )}&guildName=${encodeURIComponent(await this.getName(id))}&guildIcon=${encodeURIComponent(
                     ppgp
                   )}&memberCount=${encodeURIComponent(
                     nthMember.toString()
                   )}&avatar=${encodeURIComponent(pp)}&background=${encodeURIComponent(
-                    'https://i.imgur.com/8B4jwGq.jpeg'
+                    'https://cdn.jsdelivr.net/gh/drasticroy/A17@master/Assets/pic13.jpg'
                   )}`;
           
                   try {
                     let leaveResponse = await fetch(leaveApiUrl);
                     let leaveBuffer = await leaveResponse.buffer();
           
-                    this.sendFile(id, leaveBuffer, 'leave.png', text, null, false, { mentions: [user] });
+                     this.sendMessage(id, {
+                        text: text,
+                        contextInfo: {
+                        mentionedJid: [user],
+                        externalAdReply: {
+                        title: "ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ",
+                        body: "Goodbye from  Group",
+                        thumbnailUrl: leaveApiUrl,
+                        sourceUrl: 'https://chat.whatsapp.com/F3sB3pR3tClBvVmlIkqDJp',
+                        mediaType: 1,
+                        renderLargerThumbnail: true
+                        }}})
                   } catch (error) {
                     console.error(`Error generating leave image: ${error}`);
                   }
@@ -617,7 +639,7 @@ export async function participantsUpdate({
             }
             break;
             case "promote":
-                const promoteText = (chat.sPromote || this.spromote || conn.spromote || `${emoji.promote} @user *telah diangkat menjadi Admin*`).replace("@user", "@" + participants[0].split("@")[0]);
+                const promoteText = (chat.sPromote || this.spromote || conn.spromote || `${emoji.promote} @user *is now Admin*`).replace("@user", "@" + participants[0].split("@")[0]);
                 if (chat.detect) {
                     this.sendMessage(id, {
                         text: promoteText.trim(),
@@ -626,7 +648,7 @@ export async function participantsUpdate({
                 }
                 break;
             case "demote":
-                const demoteText = (chat.sDemote || this.sdemote || conn.sdemote || `${emoji.demote} @user *tidak lagi menjadi Admin*`).replace("@user", "@" + participants[0].split("@")[0]);
+                const demoteText = (chat.sDemote || this.sdemote || conn.sdemote || `${emoji.demote} @user *demoted from Admin*`).replace("@user", "@" + participants[0].split("@")[0]);
                 if (chat.detect) {
                     this.sendMessage(id, {
                         text: demoteText.trim(),
@@ -675,9 +697,9 @@ export async function groupsUpdate(groupsUpdate) {
             text = (chats.sRevoke || this.sRevoke || conn.sRevoke || `*${emoji.revoke} Group link has been changed to*\n@revoke`)
                 .replace("@revoke", groupUpdate.revoke)
         } else if (groupUpdate.announce === true) {
-            text = (chats.sAnnounceOn || this.sAnnounceOn || conn.sAnnounceOn || `*${emoji.announceOn} Group is now closed!*`)
+            text = (chats.sAnnounceOn || this.sAnnounceOn || conn.sAnnounceOn || `*${emoji.announceOn} Group closed!*`)
         } else if (groupUpdate.announce === false) {
-            text = (chats.sAnnounceOff || this.sAnnounceOff || conn.sAnnounceOff || `*${emoji.announceOff} Group is now open!*`)
+            text = (chats.sAnnounceOff || this.sAnnounceOff || conn.sAnnounceOff || `*${emoji.announceOff} Group open!*`)
         } else if (groupUpdate.restrict === true) {
             text = (chats.sRestrictOn || this.sRestrictOn || conn.sRestrictOn || `*${emoji.restrictOn} Group is now restricted to participants only!*`)
         } else if (groupUpdate.restrict === false) {
