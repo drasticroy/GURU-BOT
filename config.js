@@ -12,7 +12,7 @@ global.owner = [
   [''] 
 ] //Number of owners
 
-//global.pairingNumber = "254722961404" //put your bot number here
+//global.pairingNumber = "" //put your bot number here
 
 global.mods = ['254740279985','254713163290'] 
 global.prems = ['254740279985','254713163290']
@@ -60,7 +60,7 @@ global.dygp = 'https://wa.me/254740279985'
 global.fgsc = 'https://github.com/drasticroy/GURU-BOT' 
 global.fgyt = 'https://youtube.com/@Asliguru'
 global.fgpyp = 'https://youtube.com/@Asliguru'
-global.fglog = 'https://raw.githubusercontent.com/Guru322/api/Guru/guru.jpg' 
+global.fglog = 'https://media.discordapp.net/attachments/556959468252954634/694944530285199440/image0-2.jpg' 
 global.thumb = fs.readFileSync('./Assets/Gurulogo.jpg')
 
 
