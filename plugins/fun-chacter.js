@@ -1,5 +1,5 @@
 let handler = async (m, { conn, command, text, usedPrefix, participants }) => {
-    if (!text) throw "Mention whose you want to check character"
+    if (!text) throw "Mention whose character you want to check"
     const mentionedUser = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : args[2] ? (args[2].replace(/[@ .+-]/g, '') + '@s.whatsapp.net') : ''
  const userChar = [
       "Sigma",
