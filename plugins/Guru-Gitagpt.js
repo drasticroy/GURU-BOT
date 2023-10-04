@@ -13,11 +13,11 @@ let gitagptHandler = async (m, { text, usedPrefix, command }) => {
     conn.sendPresenceUpdate('composing', m.chat);
     const prompt = encodeURIComponent(text);
     const model = 'llama';
-    const endpoint = `https://gurugpt.cyclic.app/chat?prompt=${prompt}&model=${model}`;
+    const endpoint = `https://inrl-web.onrender.com/api/chatgpt?text=${prompt}`;
 
     const response = await fetch(endpoint);
     const data = await response.json();
-    const result = data.data; // Extracting the "data" field
+    const result = data.result; // Extracting the "data" field
 
     m.reply(result);
   } catch (error) {
