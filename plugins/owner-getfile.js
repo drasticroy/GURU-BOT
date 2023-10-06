@@ -5,13 +5,25 @@ import path from 'path'
 const _fs = fs.promises
 
 let handler = async (m, { text, usedPrefix, command, __dirname }) => {
-    if (!text) throw `
+    if (!text) {
+        throw `
 ✳️ user  : ${usedPrefix + command} <name file>
 
 📌 Example:
         ${usedPrefix}getfile main.js
         ${usedPrefix}getplugin owner
-`.trim()
+`.trim();
+    }
+
+    const fileExists = await _fs.access(text)
+        .then(() => true)
+        .catch(() => false);
+
+    if (!fileExists) {
+        
+        throw `❌ The specified file "${text}" does not exist in the DB😢.`;
+    }
+
     if (/p(lugin)?/i.test(command)) {
         const filename = text.replace(/plugin(s)\//i, '') + (/\.js$/i.test(text) ? '' : '.js')
         const pathFile = path.join(__dirname, filename)
@@ -24,7 +36,7 @@ let handler = async (m, { text, usedPrefix, command, __dirname }) => {
         })
         if (error) {
             await m.reply(`
-❎ bug found in  *${filename}*:
+❎ Bug found in *${filename}*:
 
 ${error}
 
@@ -43,7 +55,7 @@ ${error}
             })
             if (error) {
                 await m.reply(`
-❎ bug found in *${text}*:
+❎ Bug found in *${text}*:
 
 ${error}
 
