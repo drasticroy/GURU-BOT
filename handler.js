@@ -571,7 +571,7 @@ export async function participantsUpdate({
                         contextInfo: {
                         mentionedJid: [user],
                         externalAdReply: {
-                        title: "ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ",
+                        title: "𝕲𝖚𝖗𝖚 𝕭𝖔𝖙 𝕽𝖊𝖈𝖔𝖉𝖊𝖉",
                         body: "welcome to Group",
                         thumbnailUrl: welcomeApiUrl,
                         sourceUrl: 'https://wa.me/+254740279985',
@@ -599,7 +599,7 @@ export async function participantsUpdate({
                   pp = 'https://cdn.jsdelivr.net/gh/drasticroy/A17@master/Assets/pic5.jpg'; // Assign default image URL
                   ppgp = 'https://cdn.jsdelivr.net/gh/drasticroy/A17@master/Assets/pic8.jpg'; // Assign default image URL
                 } finally {
-                  let text = (chat.sBye || this.bye || conn.bye || 'HELLO, @user')
+                  let text = (chat.sBye || this.bye || conn.bye || 'Hey, @user')
                     .replace('@user', '@' + user.split('@')[0]);
           
                   let nthMember = groupMetadata.participants.length;
@@ -624,10 +624,10 @@ export async function participantsUpdate({
                         contextInfo: {
                         mentionedJid: [user],
                         externalAdReply: {
-                        title: "ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ",
-                        body: "Goodbye from  Group",
+                        title: "𝕲𝖚𝖗𝖚 𝕭𝖔𝖙 𝕽𝖊𝖈𝖔𝖉𝖊𝖉",
+                        body: "Goodbye from Group",
                         thumbnailUrl: leaveApiUrl,
-                        sourceUrl: 'https://chat.whatsapp.com/F3sB3pR3tClBvVmlIkqDJp',
+                        sourceUrl: 'https://wa.me/+254740279985',
                         mediaType: 1,
                         renderLargerThumbnail: true
                         }}})
@@ -805,7 +805,7 @@ export async function presenceUpdate(presenceUpdate) {
 dfail
  */
 global.dfail = (type, m, conn) => {
-    const userTag = `👋 Hai *@${m.sender.split("@")[0]}*, `
+    const userTag = `👋 Hey there *@${m.sender.split("@")[0]}*, `
     const emoji = {
         general: '⚙️',
         owner: '👑',
