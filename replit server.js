@@ -47,11 +47,11 @@ function pipeEmit(event, event2, prefix = '') {
 }
 
 function keepAlive() {
-    const url = `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`
-    if (/(\/\/|\.)undefined\./.test(url)) return
+    const url = `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`;
+    if (/(\/\/|\.)undefined\./.test(url)) return;
     setInterval(() => {
-        fetch(url).catch(console.error)
-    }, 5 * 1000 * 60)
+        fetch(url).catch(console.error);
+    }, 5 * 1000 * 60); // Send a request every 5 minutes
 }
 
 
