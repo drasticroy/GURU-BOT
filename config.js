@@ -50,7 +50,7 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.botname = 'Guru Bot Reprogrammed'
+global.botname = '𝕲𝖚𝖗𝖚 𝕭𝖔𝖙 𝕽𝖊𝖕𝖗𝖔𝖌𝖗𝖆𝖒𝖒𝖊𝖉'
 global.premium = 'true'
 global.packname = 'GURUReprogrammed┃ᴮᴼᵀ' 
 global.author = '@drasticroy' 
@@ -72,7 +72,7 @@ global.error = '❌'
 global.xmoji = '🔥' 
 
 global.multiplier = 69 
-global.maxwarn = '3' // máxima advertencias
+global.maxwarn = '3' // maximum warnings
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
