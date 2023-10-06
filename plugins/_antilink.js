@@ -1,40 +1,41 @@
-const linkRegexArray = [
-  /chat.whatsapp.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i, // WhatsApp group invite links
-  /tiktok.com/i, // TikTok links
-  /youtube.com|youtu.be/i, // YouTube links
-  /t.me/i, // Telegram links
-  /facebook.com|fb.me/i, // Facebook links
-  /instagram.com/i, // Instagram links
-  /http|https/i, // Generic HTTP/HTTPS links
-];
-
 export async function before(m, { conn, isAdmin, isBotAdmin }) {
-  if (m.isBaileys && m.fromMe)
-    return !0;
-  if (!m.isGroup) return !1;
-  let chat = global.db.data.chats[m.chat];
-  let bot = global.db.data.settings[this.user.jid] || {};
+  // If the message is from Baileys or from the bot itself, ignore it.
+  if (m.isBaileys && m.fromMe) {
+    return true;
+  }
 
-  for (let i = 0; i < linkRegexArray.length; i++) {
-    const linkRegex = linkRegexArray[i];
-    const isLink = linkRegex.exec(m.text);
+  // If the message is not from a group, ignore it.
+  if (!m.isGroup) {
+    return false;
+  }
 
+  // Get the chat data.
+  const chat = global.db.data.chats[m.chat];
+
+  // Check if the antiLink feature is enabled.
+  if (chat.antiLink) {
+    // Check if the message contains any links.
+    const isLink = /(?:https?:\/\/)?[^\s\/]+/i.exec(m.text);
+
+    // If the user is not an admin and the message contains a link, take action.
     if (isLink && !isAdmin) {
-      if (isBotAdmin) {
-        const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`;
-        if (m.text.includes(linkThisGroup)) return !0;
-      }
-      await conn.reply(m.chat, "*≡ Link Detected*\nWe do not allow links in this group.", null, { mentions: [m.sender] });
+      // Reply with a warning message.
+      const warningMessage = `*≡ Link Detected*
+      
+We do not allow links in this group.`;
+      await conn.reply(m.chat, warningMessage, null, { mentions: [m.sender] });
 
-      if (isBotAdmin && chat.antiLink) {
+      // If the bot is an admin, delete the message and kick the user.
+      if (isBotAdmin) {
+        // Delete the message.
         await conn.sendMessage(m.chat, { delete: m.key });
+
+        // Kick the user.
         await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove');
-        return !0;
-      } else if (!chat.antiLink) {
-        return !0;
       }
     }
   }
 
-  return !0;
+  // If no links are detected or the user is an admin, return true.
+  return true;
 }
