@@ -24,7 +24,7 @@ export async function before(m, { conn, isAdmin, isBotAdmin }) {
         const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`;
         if (m.text.includes(linkThisGroup)) return !0;
       }
-      await conn.reply(m.chat, "*≡ Link Detected*\nWe do not allow links of this type.", null, { mentions: [m.sender] });
+      await conn.reply(m.chat, "*≡ Link Detected*\nWe do not allow links in this group.", null, { mentions: [m.sender] });
 
       if (isBotAdmin && chat.antiLink) {
         await conn.sendMessage(m.chat, { delete: m.key });
