@@ -20,7 +20,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     who = m.chat;
   }
 
-  if (!who) throw `✳️ Tag or mention someone\n\n📌 Example : ${usedPrefix + command} @tag`;
+  if (!who) throw `✳️ Tag or mention someone dummy🥱\n\n📌 Example : ${usedPrefix + command} @tag`;
 
   let name = conn.getName(who);
   let name2 = conn.getName(m.sender);
