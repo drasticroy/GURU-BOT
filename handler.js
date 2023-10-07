@@ -132,7 +132,7 @@ export async function handler(chatUpdate) {
             if (typeof chat !== "object")
                 global.db.data.chats[m.chat] = {}
             if (chat) {
-                if (!("antiDelete" in chat)) chat.antiDelete = false
+                if (!("antiDelete" in chat)) chat.antiDelete = true
                 if (!("antiLink" in chat)) chat.antiLink = false
                 if (!("antiSticker" in chat)) chat.antiSticker = false
                 if (!("antiToxic" in chat)) chat.antiToxic = false
@@ -151,7 +151,7 @@ export async function handler(chatUpdate) {
                 if (!isNumber(chat.expired)) chat.expired = 0
             } else
                 global.db.data.chats[m.chat] = {
-                    antiDelete: false,
+                    antiDelete: true,
                     antiLink: false,
                     antiSticker: false,
                     antiToxic: false,
@@ -541,10 +541,10 @@ export async function participantsUpdate({
                   ppgp = await this.profilePictureUrl(id, 'image');
                 } catch (error) {
                   console.error(`Error retrieving profile picture: ${error}`);
-                  pp = 'https://i.imgur.com/8B4jwGq.jpeg'; // Assign default image URL
-                  ppgp = 'https://i.imgur.com/8B4jwGq.jpeg'; // Assign default image URL
+                  pp = 'https://cdn.jsdelivr.net/gh/drasticroy/A17@master/Assets/pic11.jpg'; // Assign default image URL
+                  ppgp = 'https://cdn.jsdelivr.net/gh/drasticroy/A17@master/Assets/pic11.jpg'; // Assign default image URL
                 } finally {
-                  let text = (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user')
+                  let text = (chat.sWelcome || this.welcome || conn.welcome || 'Welcome there, @user')
                     .replace('@group', await this.getName(id))
                     .replace('@desc', groupMetadata.desc?.toString() || 'error')
                     .replace('@user', '@' + user.split('@')[0]);
@@ -603,7 +603,7 @@ export async function participantsUpdate({
                     .replace('@user', '@' + user.split('@')[0]);
           
                   let nthMember = groupMetadata.participants.length;
-                  let secondText = `Goodbye, our ${nthMember}th group member`;
+                  let secondText = `Goodbye😐, our ${nthMember}th group member`;
           
                   let leaveApiUrl = `https://cdn.jsdelivr.net/gh/drasticroy/A17@master/Assets/pic8.jpg?username=${encodeURIComponent(
                     await this.getName(user)
@@ -625,7 +625,7 @@ export async function participantsUpdate({
                         mentionedJid: [user],
                         externalAdReply: {
                         title: "𝕲𝖚𝖗𝖚 𝕭𝖔𝖙 𝕽𝖊𝖈𝖔𝖉𝖊𝖉",
-                        body: "Goodbye from Group",
+                        body: "Another Pussy Virgin Just left",
                         thumbnailUrl: leaveApiUrl,
                         sourceUrl: 'https://wa.me/+254740279985',
                         mediaType: 1,
@@ -732,10 +732,11 @@ export async function deleteUpdate(message) {
             return
             await this.reply(msg.chat, `
             ≡ deleted a message 
-            ┌─⊷  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀 
+            ┌─⊷ 𝓜𝓕𝓚𝓘𝓝𝓖 𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀 
             ▢ *Number :* @${participant.split`@`[0]} 
+            |  If feature has a Problem calm down the recoder knows
             └─────────────
-            TO DEACTIVATE , TYPE 
+            TO DEACTIVATE, 🤣Hope it works😝, TYPE 
             */off antidelete*
             *.enable delete*
             `.trim(), msg, {
