@@ -31,7 +31,6 @@ import {
   ⛥ *Bot Name:* ${botname}
   ⛥ *Mode:* %mode
   ⛥ *Platform:* %platform
-  ⛥ *Type:* NodeJs
   ⛥ *Baileys:* Multi Device
   ⛥ *Prefix:* [ *%_p* ]
   ⛥ *Uptime:* %muptime
@@ -224,7 +223,7 @@ import {
  }
  
  function ucapan() {
-  const time = moment.tz("Asia/Kolkata").format("HH")
+  const time = moment.tz("Africa/Nairobi").format("HH")
   let res = "Good morning ☀️"
   if (time >= 4) {
    res = "Good Morning 🌄"
