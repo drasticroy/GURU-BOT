@@ -5,8 +5,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     if (/image/.test(mime)) {
     let img = await q.download()
     if (!img) throw '*REPLY TO AN IMAGE.*'
-    await conn.updateProfilePicture(m.chat, img).then(_ => m.reply('IMAGE SUCCESSFULLY SET AS PP._*'))
-    } else throw '*REPLY TO AN IMAGE.*'}
+    await conn.updateProfilePicture(m.chat, img).then(_ => m.reply('IMAGE SUCCESSFULLY SET AS PP😁._*'))
+    } else throw '*REPLY TO AN IMAGE😒 FOOL.*'}
     handler.command = /^setpp(group|grup|gc)?$/i
     handler.group = true
     handler.admin = true
