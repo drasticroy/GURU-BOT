@@ -44,7 +44,7 @@ break;
    ⎪⌲👑 _${usedPrefix}groups_
    ⎪⌲👑 _${usedPrefix}blocklist_
    ⎪⌲👑 _${usedPrefix}listprem_
-   ⎪⌲👑    Guru
+   ⎪⌲👑 _${usedPrefix}feature_
    ┗━━━ʕ•㉨•ʔ━━━┛`; // Your bot menu message here
           break;
         case 'ownermenu':
@@ -156,6 +156,7 @@ break;
     ⎪⌲👑 _${usedPrefix}ytcomment_
     ⎪⌲👑 _${usedPrefix}stupid_
     ⎪⌲👑 _${usedPrefix}lolicon_
+    ⎪⌲👑 _${usedPrefix}wanted_
     ┗━━━ʕ•㉨•ʔ━━━┛`; // 
           break;
           case 'animemenu':
