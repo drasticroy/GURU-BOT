@@ -1,7 +1,7 @@
 import fetch from "node-fetch"
 
 let handler = async (m, { conn, isOwner, usedPrefix, command, args }) => {
-    let query = "Oops! I need an input text. Try something like this:\n.midjourney man kissing";
+    let query = "Oops! I need an input text. Try something like this: Elon Musk Running";
     let text;
     
     if (args.length >= 1) {
