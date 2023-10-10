@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
   let pp = await conn.profilePictureUrl(who, 'image').catch(_ => './Guru.jpg')
   conn.sendFile(m.chat, global.API('https://api.popcat.xyz/wanted?image=', {
     avatar: pp, 
-  }), 'wanted.png', `🏳️‍🌈  *Wanted :* ${name}\n\nWanted by the law☠️? `, m)
+  }), 'wanted.png', `💀⚡  *Wanted :* ${name}\n\nWanted by the law☠️? `, m)
 }
 
 handler.help = ['wanted @user']
