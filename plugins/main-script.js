@@ -19,7 +19,7 @@ let handler = async function (m, { conn, __dirname }) {
 📂 Repository Name: Drastic Recoded
 ⚠️ Donations are required for the Full Script ⚠️
 😒 You can dm coder https://wa.me/+254740279985
-📝 Description: Its better Than all before
+📝 Description: Its better Than all before it
 👨‍💻 Owner: Drastic Roy 💀
 👻 Dont be a Puss Clat
 😎 https://recoderdrastic.is-a.dev
