@@ -592,7 +592,6 @@ let handler = async (m, {
 ${spas} *[ U S E R  I N F O ]*
 👥 *ɴᴀᴍᴇ:* ${usrs.registered ? usrs.name : conn.getName(m.sender)}
 📧 *ᴛᴀɢs:* @${m.sender.split`@`[0]}
-🔒 *sᴛᴀᴛᴜs:* ${m.sender.split`@`[0] == nomorown ? "Developer" : (usrs.premiumTime >= 1 ? "Premium User" : "Free User")}
 💎 *ᴘʀᴇᴍɪᴜᴍ:* ${usrs.premiumTime > 1 ? "Yes": "No"}
 
 ${spas} *[ S T A T U S  I N F O ]*
@@ -818,7 +817,7 @@ ${v.rowId}`.trim()
         // Biasa
         
     } catch (e) {
-        conn.reply(m.chat, "Maaf, menu sedang error", m)
+        conn.reply(m.chat, "Sorry, the menu run into an error", m)
         throw e
     }
 }
