@@ -3,7 +3,7 @@ import { join } from 'path';
 import axios from 'axios'; 
 
 let handler = async function (m, { conn, __dirname }) {
-  const githubRepoURL = 'https://github.com/drasticroy/GURU-BOT';
+  const githubRepoURL = 'https://github.com/drasticroy/';
 
   try {
   
@@ -16,11 +16,14 @@ let handler = async function (m, { conn, __dirname }) {
 
       // Format the repository information with emojis
       const formattedInfo = `
-📂 Repository Name: ${repoData.name}
-📝 Description: ${repoData.description}
-👤 Owner: ${repoData.owner.login}
-⭐ Stars: ${repoData.stargazers_count}
-🍴 Forks: ${repoData.forks_count}
+📂 Repository Name: Drastic Recoded
+⚠️ Donations are required for the Full Script ⚠️
+😒 You can dm coder https://wa.me/+254740279985
+📝 Description: Its better Than all before
+👨‍💻 Owner: Drastic Roy 💀
+👻 Dont be a Puss Clat
+😎 https://recoderdrastic.is-a.dev
+😒 Visit My page 😁 You Might get SC there
 🌐 URL: ${repoData.html_url}
       `.trim();
 
