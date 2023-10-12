@@ -10,20 +10,22 @@ let handler = async(m, { conn, usedPrefix, command }) => {
     
 To help us keep improving, consider following us on Instagram. Every new follower brings us joy and motivation! 
 
-Our Instagram: @asli_guru_2k23
+Our Instagram😁: @drastic_roy 
+https://instagram.com/drasticroy
 
 Remember, even the smallest support can make a huge difference!
+Donate to KoFi😪 https://ko-fi.com/drasticroy
 
-Additionally, if you'd like to contribute directly, you can use the attached Google Pay QR code. Just scan it with your Google Pay app to send a donation. Your support means the world to us!`;
+Additionally, if you'd like to contribute directly my paypal is drasticroy. Your support means the world to us!`;
 
-    let img = 'https://telegra.ph/file/005c11a341e1f038786e5.jpg'; 
+    let img = 'https://cdn.jsdelivr.net/gh/drasticroy/api/donate.jpg'; 
 
     console.log("Sending message and image...");
     await conn.sendFile(m.chat, img, 'donation.jpg', message, m, false, rpyp);
     console.log("Message and image sent.");
 };
 
-handler.help = ['Donate'];
+handler.help = ['Donation'];
 handler.tags = ['Main'];
 handler.command = ['donate', 'support', 'contribute'];
 
