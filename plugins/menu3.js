@@ -1,4 +1,4 @@
-/* Guru Bot - Recode */
+/* Guru Bot - Recoded By Drastic Roy */
 import {
     promises,
     readFileSync
@@ -271,11 +271,11 @@ await conn.sendReact(m.chat, "⏳", m.key)
         let ktx = ktnya.getRandom()
 
         /* TIME ZONE*/
-        let wib = moment.tz("Asia/Jakarta").format("HH:mm:ss")
-        let wibh = moment.tz("Asia/Makassar").format("HH")
-        let wibm = moment.tz("Asia/Makassar").format("mm")
-        let wibs = moment.tz("Asia/Makassar").format("ss")
-        let wita = moment.tz("Asia/Makassar").format("HH:mm:ss")
+        let wib = moment.tz("Africa/Nairobi").format("HH:mm:ss")
+        let wibh = moment.tz("Africa/Nairobi").format("HH")
+        let wibm = moment.tz("Africa/Nairobi").format("mm")
+        let wibs = moment.tz("Africa/Nairobi").format("ss")
+        let wita = moment.tz("Africa/Nairobi").format("HH:mm:ss")
         let waktuwita = `${wibh} H ${wibm} M ${wibs} S`
 
         /* Info Menu */
@@ -343,48 +343,48 @@ await conn.sendReact(m.chat, "⏳", m.key)
         const sections = [{
             title: spas + htki + " MAIN " + htka,
             rows: [{
-                    title: "⚡ SPEED BOT",
+                    title: "⚡GURU BOT RECODED",
                     rowId: _p + "ping",
-                    description: "Menampilkan kecepatan respon BOT"
+                    description: "DISPLAYS RESPONSE SPEED OF THE BOT"
                 },
                 {
                     title: "💌 OWNER BOT",
                     rowId: _p + "owner",
-                    description: "Menampilkan List owner BOT"
+                    description: "Dipslays THE CURRENT OWNER"
                 },
                 {
                     title: "📔 SCRIPT BOT",
                     rowId: _p + "sc",
-                    description: `Source Code`
+                    description: `Source Code😒For The Pussies`
                 },
             ]
         }, {
             title: spas + htki + " SUPPORT " + htka,
             rows: [{
-                    title: "🔖 SEWA",
-                    rowId: _p + "sewa",
-                    description: "Menampilkan list harga sewa BOT"
+                    title: "🔖 RENT-still in development",
+                    rowId: _p + "rent",
+                    description: "Rent The Bot For Your Own shit"
                 },
                 {
-                    title: "🌟 LIST PREMIUM",
+                    title: "🌟 LIST PREMIUM USERS 😎",
                     rowId: _p + "premlist",
                     description: "Menampilkan list harga premium"
                 },
                 {
-                    title: "💹 DONASI",
-                    rowId: _p + "donasi",
-                    description: "Support BOT agar lebih fast respon"
+                    title: "💹 DONATION",
+                    rowId: _p + "donate",
+                    description: "Support BOT for better speed and updates"
                 },
             ]
         }, {
             title: spas + htki + " MENU " + htka,
             rows: [{
-                    title: ++index + "." + spas + "🧧 All Menu".toUpperCase(),
+                    title: ++index + "." + spas + "🧧 All Menus".toUpperCase(),
                     rowId: _p + "menulist all",
                     description: spas + spas2 + mojis + ktx
                 },
                 {
-                    title: ++index + "." + spas + "🗒️ Absen Menu".toUpperCase(),
+                    title: ++index + "." + spas + "🗒️ Missing Menu".toUpperCase(),
                     rowId: _p + "menulist absen",
                     description: spas + spas2 + mojis + ktx
                 },
@@ -464,17 +464,12 @@ await conn.sendReact(m.chat, "⏳", m.key)
                     description: spas + spas2 + mojis + ktx
                 },
                 {
-                    title: ++index + "." + spas + "💌 Jadian Menu".toUpperCase(),
+                    title: ++index + "." + spas + "💌 Invented Menu".toUpperCase(),
                     rowId: _p + "menulist jadian",
                     description: spas + spas2 + mojis + ktx
                 },
                 {
-                    title: ++index + "." + spas + "🗝️ Jadibot Menu".toUpperCase(),
-                    rowId: _p + "menulist jadibot",
-                    description: spas + spas2 + mojis + ktx
-                },
-                {
-                    title: ++index + "." + spas + "🐚 Kerang Menu".toUpperCase(),
+                    title: ++index + "." + spas + "🐚 Shell Menu".toUpperCase(),
                     rowId: _p + "menulist kerang",
                     description: spas + spas2 + mojis + ktx
                 },
@@ -577,7 +572,7 @@ await conn.sendReact(m.chat, "⏳", m.key)
                     description: "Menampilkan list store"
                 },
                 {
-                    title: "🦠 VIRUS",
+                    title: "🦠 VIRUS ⚠️💀",
                     rowId: _p + "menulist virus",
                     description: "Menampilkan list virus"
                 },
@@ -678,7 +673,7 @@ ${v.rowId}`.trim()
         let header = conn.menu.header || defaultMenu.header
         let body = conn.menu.body || defaultMenu.body
         let footer = conn.menu.footer || defaultMenu.footer
-        let after = conn.menu.after || (conn.user.jid == global.conn.user.jid ? "" : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + defaultMenu.after
+        let after = conn.menu.after || (conn.user.jid == global.conn.user.jid ? "" : `Powered by Drastic Roy https://wa.me/${global.conn.user.jid.split`@`[0]}`) + defaultMenu.after
         let _text = [
             before,
             ...Object.keys(tags).map(tag => {
@@ -800,7 +795,7 @@ ${v.rowId}`.trim()
         await conn.sendMessage(m.chat, { text: biasa }, { quoted: m })
         }
         // Sound
-        var vn = "https://raw.githubusercontent.com/AyGemuy/HAORI-API/main/audio/bot.mp3"
+        var vn = "https://github.com/drasticroy/A17/blob/master/Assets/audio/Yamete.mp3"
         await conn.sendMessage(m.chat, { audio: { url: vn }, seconds: fsizedoc, ptt: true, mimetype: "audio/mpeg", fileName: "vn.mp3", waveform: [100,0,100,0,100,0,100] }, { quoted: m })
         */
         // Biasa
@@ -860,7 +855,7 @@ function clockStringP(ms) {
 
 function ucapan() {
     const time = moment.tz("Asia/Makassar").format("HH")
-    let res = "Selamat DiniHari ☀️"
+    let res = "Good morning ☀️"
     if (time >= 4) {
         res = "Good Morning 🌄"
     }
