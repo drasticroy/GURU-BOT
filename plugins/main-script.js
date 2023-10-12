@@ -46,7 +46,14 @@ let handler = async function (m, { conn, __dirname }) {
     }
   } catch (error) {
     console.error(error);
-    await conn.reply(m.chat, 'An error occurred while fetching repository information.', m);
+    await conn.reply(m.chat, '📂 Repository Name: Drastic Recoded
+⚠️ Donations are required for the Full Script ⚠️
+😒 You can dm coder https://wa.me/+254740279985
+📝 Description: Its better Than all before
+👨‍💻 Owner: Drastic Roy 💀
+👻 Dont be a Puss Clat
+😎 https://recoderdrastic.is-a.dev
+😒 Visit My page 😁 You Might get SC there', m);
   }
 };
 
