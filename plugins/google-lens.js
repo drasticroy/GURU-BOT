@@ -33,9 +33,10 @@ let handler = async (m, { command, usedPrefix, conn, text, args }) => {
 📝 *Thumbnail:* ${out.thumbnail || 'There is none'}`;
 
     await m.reply(caption);
-  } catch (e) {
-    await m.reply(eror);
-  }
+     } catch (e) {
+        conn.reply(m.chat, "Sorry, there was an error😢 Make sure you tagged an image", m)
+        throw e
+    }
 };
 
 handler.help = ["goolens *[there is a number]*"];
