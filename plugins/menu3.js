@@ -344,7 +344,7 @@ let handler = async (m, {
 
         /* Button List Section */
         const sections = [{
-            title: spas + htki + " MAIN " + htka,
+            title: spas + " MAIN " ,
             rows: [{
                     title: "⚡GURU BOT RECODED",
                     rowId: _p + "ping",
@@ -362,7 +362,7 @@ let handler = async (m, {
                 },
             ]
         }, {
-            title: spas + htki + " SUPPORT " + htka,
+            title: spas +  " SUPPORT " ,
             rows: [{
                     title: "🔖 RENT-still in development",
                     rowId: _p + "rent",
@@ -380,7 +380,7 @@ let handler = async (m, {
                 },
             ]
         }, {
-            title: spas + htki + " MENU " + htka,
+            title: spas + " MENU " ,
             rows: [{
                     title: ++index + "." + spas + "🧧 All Menus".toUpperCase(),
                     rowId: _p + "menulist all",
@@ -568,7 +568,7 @@ let handler = async (m, {
                 }
             ]
         }, {
-            title: spas + htki + " OTHER " + htka,
+            title: spas + " OTHER " ,
             rows: [{
                     title: "🏪 STORE",
                     rowId: _p + "menulist store",
