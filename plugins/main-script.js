@@ -16,16 +16,15 @@ let handler = async function (m, { conn, __dirname }) {
 
       // Format the repository information with emojis
       const formattedInfo = `
-📂 Repository Name: Drastic Recoded
-⚠️ Donations are required for the Full Script ⚠️
-😒 You can dm coder https://wa.me/+254740279985
+📂 ʀᴇᴘᴏꜱɪᴛᴏʀʏ ɴᴀᴍᴇ: 𝕯𝖗𝖆𝖘𝖙𝖎𝖈 𝕽𝖊𝖈𝖔𝖉𝖊𝖉
+⚠️ Donations are required for Script ⚠️
+😒 ʏօʊ ƈǟռ ɖʍ ƈօɖɛʀ https://wa.me/+254740279985
 📝 Description: Its better Than all before it
-👨‍💻 Owner: Drastic Roy 💀
-👻 Dont be a Puss Clat
+👨‍💻 𝙊𝙬𝙣𝙚𝙧: D̲r̲a̲s̲t̲i̲c̲ ̲R̲o̲y̲ 💀
+👻 D̳o̳n̳t̳ ̳b̳e̳ ̳a̳ ̳P̳u̳s̳s̳ ̳C̳l̳a̳t̳
 😎 https://recoderdrastic.is-a.dev
-😒 Visit My page 😁 You Might get SC there
-📝 Description: ${repoData.description}
-👤 Owner: ${repoData.owner.login}
+😒 νιѕιт му ραgє 😁 уσυ мιgнт gєт ѕ¢ тнєяє
+📝 Description: More shit innit
       `.trim();
 
       // Send the formatted information as a message
