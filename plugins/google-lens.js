@@ -22,9 +22,9 @@ let handler = async (m, { command, usedPrefix, conn, text, args }) => {
     
     let all = await generateSerpApiUrl(param);
     let data = all.visual_matches;
-    if (!urutan) return m.reply("Input query!\n*Example:*\n.goolens [nomor]\n\n*Choose the numbers that exist*\n" + data.map((item, index) => `*${index + 1}.* ${item.title}`).join("\n"));
-    if (isNaN(urutan)) return m.reply("Input query!\n*Example:*\n.goolens [nomor]\n\n*Choose the numbers that exist*\n" + data.map((item, index) => `*${index + 1}.* ${item.title}`).join("\n"));
-    if (urutan > data.length) return m.reply("Input query!\n*Example:*\n.goolens [nomor]\n\n*Choose the numbers that exist*\n" + data.map((item, index) => `*${index + 1}.* ${item.title}`).join("\n"));
+    if (!urutan) return m.reply("Input query!\n*Example:*\n.googlelens [number]\n\n*Choose the numbers that exist*\n" + data.map((item, index) => `*${index + 1}.* ${item.title}`).join("\n"));
+    if (isNaN(urutan)) return m.reply("Input query!\n*Example:*\n.googlelens [number]\n\n*Choose the numbers that exist*\n" + data.map((item, index) => `*${index + 1}.* ${item.title}`).join("\n"));
+    if (urutan > data.length) return m.reply("Input query!\n*Example:*\n.googlelens [number]\n\n*Choose the numbers that exist*\n" + data.map((item, index) => `*${index + 1}.* ${item.title}`).join("\n"));
     let out = data[urutan - 1];
     let caption = `🔍 *[ RESULTS 😁 ]*
 📋 *Description:* ${out.title || 'There is none'}
