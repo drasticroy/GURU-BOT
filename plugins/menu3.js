@@ -75,7 +75,6 @@ let handler = async (m, {
   
   let tags = {}
     let teks = `${args[0]}`.toLowerCase()
-    let pp = './Assets/Gurulogo.jpg
     let arrayMenu = ["all", "absen", "admin", "advanced", "anonymous", "ai", "gpt", "audio", "Baileys", "database", "downloader", "edukasi", "fun", "game", "genshin", "group", "host", "info", "internet", "jadian", "jadibot", "kerang", "main", "maker", "music", "nocategory", "nsfw", "nulis", "owner", "premium", "primbon", "quotes", "quran", "random", "rpg", "sticker", "tools", "vote", "xp", "store", "virus", "thnks"]
     if (!arrayMenu.includes(teks)) teks = "404"
     if (teks == "all") tags = {
@@ -641,7 +640,6 @@ ${v.rowId}`.trim()
                 title: wm,
                 mediaType: 1,
                 renderLargerThumbnail: true,
-                thumbnail: await conn.resize(pp, 300, 175),
                 sourceUrl: "",
                 mediaUrl: pp,
             },
@@ -810,8 +808,6 @@ ${v.rowId}`.trim()
             externalAdReply: {
                 title: wm,
                 mediaType: 1,
-                renderLargerThumbnail: true,
-                thumbnail: await conn.resize(pp, 300, 175),
                 sourceUrl: "",
                 mediaUrl: pp,
             },
