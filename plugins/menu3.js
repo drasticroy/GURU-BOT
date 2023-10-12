@@ -76,14 +76,12 @@ await conn.sendReact(m.chat, "⏳", m.key)
         "main": "Main",
         "rpg": "RolePlay Games",
         "xp": "Exp & Limit",
-        "jadian": "Jadian",
         "sticker": "Sticker",
-        "edukasi": "Edukasi",
+        "fact": "Education",
         "quran": "Al Quran",
         "ai": "AI",
         "gpt": "GPT",
         "tools": "Tools",
-        "kerang": "Kerang Ajaib",
         "primbon": "Primbon",
         "fun": "Fun",
         "game": "Game",
@@ -112,7 +110,7 @@ await conn.sendReact(m.chat, "⏳", m.key)
         "Baileys": "Baileys",
         "store": "Store Menu",
         "virus": "𐐪-〚 Virtex 〛-𐑂",
-        "thnks": "Thanks To",
+        "thnks": "Thanks To Drastic Roy",
         "nocategory": "No Category"
     }
     if (teks == "absen") tags = {
@@ -233,7 +231,7 @@ await conn.sendReact(m.chat, "⏳", m.key)
         "virus": "𐐪-〚 Virtex 〛-𐑂"
     }
     if (teks == "thnks") tags = {
-        "thnks": "Thanks To"
+        "thnks": "Thanks To Drastic Roy"
     }
     if (teks == "nocategory") tags = {
         "nocategory": "No Category"
@@ -267,7 +265,7 @@ await conn.sendReact(m.chat, "⏳", m.key)
         let spas2 = "         "
         let mojis = "╰╴"
         let index = 0
-        let ktnya = ["Kamu nanya?", "No spam...", "Thanks..", "Menampilkan...", "Tunggu...", "Proses...", "Loading...", "Bertanya..", "Hooh..."]
+        let ktnya = ["You ask?", "No spam...", "Thanks..", "Displaying...", "Wait up...", "Process...", "Loading...", "Ask..", "Woah..."]
         let ktx = ktnya.getRandom()
 
         /* TIME ZONE*/
@@ -424,7 +422,7 @@ await conn.sendReact(m.chat, "⏳", m.key)
                     description: spas + spas2 + mojis + ktx
                 },
                 {
-                    title: ++index + "." + spas + "📔 Edukasi Menu".toUpperCase(),
+                    title: ++index + "." + spas + "📔 Education Menu".toUpperCase(),
                     rowId: _p + "menulist edukasi",
                     description: spas + spas2 + mojis + ktx
                 },
@@ -604,7 +602,7 @@ ${clockStringP(usrs.premiumTime - new Date())}` : ""}
 `
         const listMessage = {
             text: tek,
-            footer: "📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner",
+            footer: "📮 *Note:* If you encounter any difficulty or Bugs😪, just dm owner",
             mentions: await conn.parseMention(tek),
             title: htki + " *LIST MENU* " + htka,
             buttonText: " CLICK HERE " + emojis,
@@ -855,7 +853,7 @@ function clockStringP(ms) {
 
 function ucapan() {
     const time = moment.tz("Asia/Makassar").format("HH")
-    let res = "Good morning ☀️"
+    let res = "Hey There ☀️"
     if (time >= 4) {
         res = "Good Morning 🌄"
     }
