@@ -34,7 +34,7 @@ let handler = async (m, {
         let out = data[urutan - 1]
         let caption = `🔍 *[ RESUTLS😁 ]*
 
-📋 *Deskripsi:* ${out.title || 'There is none'}
+📋 *Description:* ${out.title || 'There is none'}
 📍 *Source:* ${out.source || 'There is none'}
 ⭐ *Link:* ${out.link || 'There is none'}
 📝 *Thumbnail:* ${out.thumbnail || 'There is none'}
