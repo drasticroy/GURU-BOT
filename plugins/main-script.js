@@ -3,7 +3,7 @@ import { join } from 'path';
 import axios from 'axios'; 
 
 let handler = async function (m, { conn, __dirname }) {
-  const githubRepoURL = 'https://github.com/drasticroy/';
+  const githubRepoURL = 'https://github.com/drasticroy/GURU-BOT';
 
   try {
   
@@ -24,14 +24,15 @@ let handler = async function (m, { conn, __dirname }) {
 👻 Dont be a Puss Clat
 😎 https://recoderdrastic.is-a.dev
 😒 Visit My page 😁 You Might get SC there
-🌐 URL: ${repoData.html_url}
+📝 Description: ${repoData.description}
+👤 Owner: ${repoData.owner.login}
       `.trim();
 
       // Send the formatted information as a message
       await conn.relayMessage(m.chat,  {
         requestPaymentMessage: {
-          currencyCodeIso4217: 'INR',
-          amount1000: 69000,
+          currencyCodeIso4217: 'USD',
+          amount1000: 600000,
           requestFrom: m.sender,
           noteMessage: {
           extendedTextMessage: {
@@ -46,14 +47,7 @@ let handler = async function (m, { conn, __dirname }) {
     }
   } catch (error) {
     console.error(error);
-    await conn.reply(m.chat, '📂 Repository Name: Drastic Recoded
-⚠️ Donations are required for the Full Script ⚠️
-😒 You can dm coder https://wa.me/+254740279985
-📝 Description: Its better Than all before
-👨‍💻 Owner: Drastic Roy 💀
-👻 Dont be a Puss Clat
-😎 https://recoderdrastic.is-a.dev
-😒 Visit My page 😁 You Might get SC there', m);
+    await conn.reply(m.chat, 'An error occurred while fetching repository information.', m);
   }
 };
 
