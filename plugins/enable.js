@@ -38,7 +38,15 @@ global.dfail('rowner', m, conn)
 throw false
 }
 bot.pmblocker = isEnable
-break	   
+break
+  case 'autobio':
+  isAll = true
+  if (!isROwner) {
+  global.dfail('rowner', m, conn)
+  throw false
+  }
+  bot.autoBio = isEnable
+ break	 
       case 'detect':
       case 'detector':
         if (!m.isGroup) {
@@ -97,6 +105,14 @@ break
         if (!(isAdmin || isOwner)) return dfail('admin', m, conn)
       }
     chat.useDocument = isEnable
+    break
+    case 'autostatus':
+      isAll = true
+      if (!isROwner) {
+        global.dfail('rowner', m, conn)
+        throw false
+      }
+      chat.viewStory = isEnable
     break
     case 'selfbot':
     case 'self':
@@ -221,6 +237,8 @@ break
 ⛊ onlydm
 ⛊ grouponly
 ⛊ autotype
+⛊ autobio
+⛊ autostatus
 ╰──────────⳹
 *📌 Example :*
 *${usedPrefix}on* welcome
