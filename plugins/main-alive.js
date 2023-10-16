@@ -21,7 +21,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
         contextInfo: {
           mentionedJid: [m.sender],
           externalAdReply: {
-          title: "I AM ALIVE",
+          title: "I AM ALIVE AS ALWAYS",
           body: "GURU BOT REMASTERED",
           thumbnailUrl: img,
           sourceUrl: 'https://wa.me/+254740279985',
