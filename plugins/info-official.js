@@ -24,5 +24,6 @@ https://www.tiktok.com/@drastic_roy
   ], m);
 };
 
+handler.tags = ['info'];
 handler.command = /^acc$/i;
 export default handler;
