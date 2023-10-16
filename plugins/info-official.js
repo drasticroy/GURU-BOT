@@ -17,7 +17,7 @@ https://www.tiktok.com/@drastic_roy
 *If you have doubts, suggestions or questions just write to https://wa.me/+254740279985.*
 `.trim();
 
-  conn.sendHydrated(m.chat, str, wm, 'https://github.com/', '𝘽𝙤𝙩-𝙈𝘿', null, null, [
+  conn.sendHydrated(m.chat, str, 'https://github.com/', '𝘽𝙤𝙩-𝙈𝘿', null, null, [
     ['x'],
     ['c'],
     ['v'],
