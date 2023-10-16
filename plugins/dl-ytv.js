@@ -1,4 +1,4 @@
-import ytdl from 'ytdl-core';
+import ytdl from 'youtubedl-core';
 import fs from 'fs';
 import os from 'os';
 
