@@ -19,7 +19,8 @@ import {
   *%ucpn*
  
  乂───『 *U S E R*』───乂
- ⛥ *Name:* %name
+  ⛥ *THANKS TO DRASTIC ROY😁*
+  ⛥ *Name:* %name
   ⛥ *Gold:* %credit
   ⛥ *Role:* %role
   ⛥ *Level:* %level [ %xp4levelup Xp For Levelup]
