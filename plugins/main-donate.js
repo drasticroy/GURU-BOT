@@ -11,7 +11,7 @@ let handler = async(m, { conn, usedPrefix, command }) => {
 To help us keep improving, consider following us on Instagram. Every new follower brings us joy and motivation! 
 
 Our Instagram😁: @drastic_roy 
-https://instagram.com/drasticroy
+https://instagram.com/drastic_roy
 
 Remember, even the smallest support can make a huge difference!
 Donate to KoFi😪 https://ko-fi.com/drasticroy
